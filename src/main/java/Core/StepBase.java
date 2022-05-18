@@ -70,7 +70,8 @@ public class StepBase {
 	{	  
 		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")  + "/Resources/chromedriver.exe");
 		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")  + "/usr/bin/chromedriver");
-		System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/EQ2-HEMSWEB/Resources/chromedriver");
+		//System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/EQ2-HEMSWEB/Resources/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("headless");
 		options.addArguments("disable-gpu");
