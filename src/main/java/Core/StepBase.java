@@ -16,6 +16,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
@@ -69,8 +70,11 @@ public class StepBase {
 	{	  
 		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")  + "/Resources/chromedriver.exe");
 		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")  + "/usr/bin/chromedriver");
-		System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/EQ2-HEMSWEB/Resources/chromedriver.exe");
-		driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", "usr/bin/chromedriver");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("headless");
+		options.addArguments("disable-gpu");
+		driver = new ChromeDriver(options);
 		objConfig.load(new FileInputStream(System.getProperty("user.dir") + "/src/main/java/Core/Config.properties"));
 		driver.get(objConfig.getProperty("test.browser.url"));
 		driver.manage().window().maximize();
