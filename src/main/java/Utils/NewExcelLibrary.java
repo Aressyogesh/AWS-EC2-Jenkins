@@ -12,7 +12,9 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class NewExcelLibrary {
 
-	public static String path = System.getProperty("user.dir") + "\\TestData\\TestData.xlsx";
+	//public static String path = System.getProperty("user.dir") + "\\TestData\\TestData.xlsx";
+	public static String path = "\\var\\lib\\jenkins\\workspace\\EQ2-HEMSWEB\\TestData\\TestData.xlsx";
+	
 
 //	public  String path;
 	public FileInputStream fis = null;
