@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Sequential" thread-count="1">
+	<listeners>
+		<listener class-name="Utils.Transformer"></listener>
+	</listeners>
+	
+	<test name="ChromeTest">
+		<parameter name="browser" value="Chrome"></parameter>
+		<classes>
+			<class name="Testpages.Login" />
+		</classes>
+	</test>
+
+	<test name="FirefoxTest">
+		<parameter name="browser" value="Firefox"></parameter>
+		<classes>
+			<class name="Testpages.Login" />
+		</classes>
+	</test>
+
+	<!-- <test name="IETest">
+		<parameter name="browser" value="IE"></parameter>
+		<classes>
+			<class name="Testpages.Login" />
+		</classes>
+	</test> -->
+</suite> <!-- Suite -->

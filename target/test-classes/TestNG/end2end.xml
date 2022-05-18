@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+
+	<listeners>
+
+		<listener class-name="Utils.Transformer" />
+
+	</listeners>
+
+	<test thread-count="1" name="end2end">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="Testpages.Login" />
+		</classes>
+	</test>
+
+</suite>
+<!-- Suite -->

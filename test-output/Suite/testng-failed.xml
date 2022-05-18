@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="Utils.Transformer"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="end2end(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="Testpages.Login">
+        <methods>
+          <include name="tearDownMethod"/>
+          <include name="setupExtentReport"/>
+          <include name="afterClass"/>
+          <include name="tearDown"/>
+          <include name="testLogin" invocation-numbers="0 0 0 0"/>
+          <include name="testMethod"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Testpages.Login -->
+    </classes>
+  </test> <!-- end2end(failed) -->
+</suite> <!-- Failed suite [Suite] -->

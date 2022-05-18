@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [Sequential]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="Utils.Transformer"/>
+  </listeners>
+  <test thread-count="1" name="FirefoxTest(failed)">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="Testpages.Login">
+        <methods>
+          <include name="tearDownMethod"/>
+          <include name="setupExtentReport"/>
+          <include name="afterClass"/>
+          <include name="tearDown"/>
+          <include name="testLogin" invocation-numbers="0"/>
+          <include name="testMethod"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Testpages.Login -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+  <test thread-count="1" name="IETest(failed)">
+    <parameter name="browser" value="IE"/>
+    <classes>
+      <class name="Testpages.Login">
+        <methods>
+          <include name="tearDownMethod"/>
+          <include name="setupExtentReport"/>
+          <include name="afterClass"/>
+          <include name="tearDown"/>
+          <include name="testLogin" invocation-numbers="0 0 0"/>
+          <include name="testMethod"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Testpages.Login -->
+    </classes>
+  </test> <!-- IETest(failed) -->
+</suite> <!-- Failed suite [Sequential] -->
