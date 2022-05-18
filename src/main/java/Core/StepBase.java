@@ -67,7 +67,9 @@ public class StepBase {
 	 
 	if (browserName.equalsIgnoreCase("chrome")) 
 	{	  
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")  + "/Resources/chromedriver.exe"); 
+		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")  + "/Resources/chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")  + "/usr/bin/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/EQ2-HEMSWEB/Resources/chromedriver.exe");
 		driver = new ChromeDriver();
 		objConfig.load(new FileInputStream(System.getProperty("user.dir") + "/src/main/java/Core/Config.properties"));
 		driver.get(objConfig.getProperty("test.browser.url"));
